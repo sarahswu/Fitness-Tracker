@@ -27,7 +27,7 @@ h3 {
 }
 
 h4 {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 700;
 }
 
@@ -36,7 +36,7 @@ p {
 }
 
 button {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 700;
   margin: auto;
   padding: 12px 20px;
@@ -112,11 +112,11 @@ form {
 #future-date {
   width: 100%;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 select {
-  font-size: 14px;
+  font-size: 16px;
 }
 
 #future-act {
@@ -134,13 +134,13 @@ select {
 
 #time {
   width: 100%;
-  font-size: 14px;
+  font-size: 16px;
   padding: 2px 3px;
 }
 
 #units {
   width: 100%;
-  font-size: 14px;
+  font-size: 16px;
   padding: 2px 3px;
 }
 
@@ -200,39 +200,59 @@ select {
 
 }
 
-@media only screen and (min-width: 768px) {
-  #past-form {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-end;
-  }
-  #past-date {
-    margin: 0;
-  }
-  #for-row {
-    width: auto;
-    margin: 0;
-  }
-  #rm-row {
-   width: auto;
-  }
-  #time-div {
-    width: auto;
-    margin: 0;
-  }
-  #units-div {
-    width: auto;
-  }
-}
-
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1100px) {
   #content {
     margin: 40px auto;
-    max-width: 1200px;
+    max-width: 1000px;
   }
   #header {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
   }
+
+  #past-form {
+    max-width: 800px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  #past-form>div {
+    margin: 0 auto;
+  }
+  #past-date {
+    margin: 0;
+    width: 100%;
+  }
+  #past-date-div {
+    width: 15%;
+  }
+  #for-row {
+    width: 100%;
+    margin: 0;
+  }
+  #past-act {
+    width: 100%;
+  }
+  #past-act-div {
+    width: 10%;
+  }
+  #rm-row {
+   width: auto;
+  }
+  #time-div {
+    width: 60%;
+    margin: 0;
+  }
+  #units-div {
+    width: 30%;
+  }
+  #past-submit {
+    margin: 0;
+    padding: 10px 35px;
+  }
+  #for-h4 {
+    margin-left: 10px;
+  }
 }
+
