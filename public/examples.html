@@ -27,43 +27,44 @@
 		<h3>Past Activity</h3>
 		<div id="past-box">
 			<!-- <button type="button" id="past-btn">Add New Activity</button> -->
-			<form>
-				<div class="col">
-					<label for="past-date">Date:</label>
+
+			<form id="past-form">
+				<div>
+					<h4>Date:<h4>
 					<input type="date" id="past-date" name="past-date" min="2018-01-01" max="2025-12-31">
 				</div>
-
-				<div class="col">
-					<label for="past-act">Activity</label>
-					<div class="row">
+				
+				<div>
+					<h4>Activity</h4>
+					<div class="row" id="for-row">
 						<select name="past-act" id="past-act">
 							<option value="walk">Walk</option>
 							<option value="run">Run</option>
 							<option value="swim">Swim</option>
 							<option value="bike">Bike</option>
 							<option value="yoga">Yoga</option>
-							<option value="soccer">Soccer</option>								
+							<option value="soccer">Soccer</option>
 							<option value="basketball">Basketball</option>
 						</select>
-						<h4>for</h4>
+		
+						<h4 id="for-h4">for</h4>
 					</div>
 				</div>
 
-				<div class="row" id="row1">
-					<div class="col">
-						<label for="time">Time/Distance</label>
+				<div class="row" id="rm-row">
+					<div id="time-div">
+						<h4>Time/Distance</h4>
 						<input type="number" id="time" name="time">
 					</div>
-					<div class="col">
-						<label for="units">Units</label>
+					<div id="units-div">
+						<h4>Units</h4>
 						<input type="text" id="units" name="units" value="km">
 					</div>
 				</div>
 
 				<button type="button" id="past-submit">Submit</button>
-				
-			</form>
 
+			</form>
 
 		</div>
 	
@@ -71,25 +72,25 @@
 		<div id="future-box">
 			<!-- <button type="button" id="future-btn">Add New Activity</button> -->
 
-			<form>
-				<div class="col">
-					<label for="future-date">Date:</label>
+			<form id="future-form">
+				<div id="future-date-div">
+					<h4>Date</h4>
 					<input type="date" id="future-date" name="future-date" min="2018-01-01" max="2025-12-31">
 				</div>
-
-				<div class="col">
-					<label for="future-act">Activity</label>
+				<div id="future-act-div">
+					<h4>Activity</h4>
 					<select name="future-act" id="future-act">
 						<option value="walk">Walk</option>
 						<option value="run">Run</option>
 						<option value="swim">Swim</option>
 						<option value="bike">Bike</option>
 						<option value="yoga">Yoga</option>
-						<option value="soccer">Soccer</option>								<option value="basketball">Basketball</option>
+						<option value="soccer">Soccer</option>
+						<option value="basketball">Basketball</option>
 					</select>
 				</div>
-				<button type="button" id="future-submit">Submit</button>
 
+				<button type="button" id="future-submit">Submit</button>
 			</form>
 
 		</div>
