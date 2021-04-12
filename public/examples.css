@@ -1,0 +1,179 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #f2f2f2;
+} 
+
+header {
+  background-color: #333333;
+  color: #fff;
+  height: 75px;
+}
+
+h1 {
+  font-size: 48px;
+  font-weight: 700;
+  max-width: 390px;
+}
+
+h2 {
+  padding: 18px 40px;
+  font-size: 28px;
+}
+
+h3 {
+  font-size: 22px;
+  font-weight: 700;
+  margin: 35px 0px 10px;
+}
+
+h4 {
+  font-size: 14px;
+  font-weight: 700;
+  margin-left: 20px;
+}
+
+p {
+  font-size: 20px;
+}
+
+button {
+  font-size: 14px;
+  font-weight: 700;
+  margin: auto;
+  padding: 12px 20px;
+  border-radius: 25px;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+form {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+select {
+  width: 130px;
+}
+
+#content {
+  margin: 41px;
+}
+
+#header {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+}
+
+img {
+  align-self: flex-end;
+  width: 200px;
+}
+
+#past-box {
+  margin: 0 auto;
+  background-color: #53E0CD;
+  width: 100%;
+  min-height: 280px;
+  border-radius: 25px;
+  display: flex;
+}
+
+#future-box {
+  margin: 0 auto;
+  background-color: #B1BAB9;
+  width: 100%;
+  min-height: 280px;
+  border-radius: 25px;
+  display: flex;
+  
+}
+
+#past-btn {
+  box-shadow: 1px 3px 7px #44ac9c;
+}
+
+#future-btn {
+  box-shadow: 1px 3px 7px #737373;
+}
+
+#past-date {
+  min-width: 120px;
+  width: 100%;
+}
+
+#future-date {
+  min-width: 120px;
+  width: 100%;
+}
+
+#time {
+  width: 100%;
+}
+
+#units {
+  width: 70%;
+}
+
+#past-submit {
+  background-color: #333333;
+  color: white;
+  box-shadow: 1px 3px 7px #44ac9c;
+  padding: 13px 45px;
+}
+
+#future-submit {
+  background-color: #333333;
+  color: white;
+  box-shadow: 1px 3px 7px #737373;
+  padding: 13px 45px;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+  width: 45%;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+#row1 {
+  justify-content: space-between;
+}
+
+@media only screen and (min-width: 600px) {
+  img {
+    width: 550px;
+  }
+  form {
+    flex-direction: row;
+    justify-content: space-evenly;
+    
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  #content {
+    margin: 40px auto;
+    max-width: 1200px;
+  }
+  #header {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
