@@ -100,7 +100,12 @@ form {
   padding: 20px 0;
 }
 
+#past-form {
+  display: none;
+}
+
 #future-form {
+  display: none;
   width: 200px;
 }
 
@@ -174,6 +179,16 @@ select {
   box-shadow: 1px 3px 7px #737373;
   padding: 13px 45px;
   margin-top: 20px;
+}
+
+#past-act-submit {
+  display: none;
+  margin: auto;
+}
+
+#future-act-submit {
+  display: none;
+  margin: auto;
 }
 
 @media only screen and (min-width: 600px) {
