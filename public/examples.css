@@ -84,7 +84,20 @@ img {
   align-items: center;
 }
 
+#past-act-submit {
+  display: flex;
+  text-align: center;
+  font-size: 18px;
+  
+}
+
+#future-act-submit {
+  display: none;
+  text-align: center;
+}
+
 #past-btn {
+  display: block;
   box-shadow: 1px 3px 7px #44ac9c;
 }
 
@@ -179,16 +192,6 @@ select {
   box-shadow: 1px 3px 7px #737373;
   padding: 13px 45px;
   margin-top: 20px;
-}
-
-#past-act-submit {
-  display: none;
-  margin: auto;
-}
-
-#future-act-submit {
-  display: none;
-  margin: auto;
 }
 
 @media only screen and (min-width: 600px) {
