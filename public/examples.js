@@ -24,6 +24,17 @@ futurebtn.onclick = function(){
     futureactsubmit.style.display = 'none'
 };
 
+const pastact = document.getElementById('past-act');
+pastact.addEventListener('change', (event) => {
+    const units = document.getElementById('units');
+    if (pastact.value == 'Swim') {
+        units.value = 'laps';
+    } else if (pastact.value == 'Yoga' || pastact.value == 'Soccer' || pastact.value == 'Basketball') {
+        units.value = 'minutes';
+    } else {
+        units.value = 'km';
+    }
+});
 
 pastsubmit.onclick = function(){
     let pastdate = document.getElementById('past-date');
@@ -38,12 +49,16 @@ pastsubmit.onclick = function(){
     time = time.value;
     console.log(time);
 
-    if (pastdate === '' || pastdate == null || pastact === '' || pastact == null || time === '' || time == null) {
+    let units = document.getElementById('units');
+    units = units.value;
+    console.log(units);
+
+    if (pastdate === '' || pastdate == null || pastact === '' || pastact == null || time === '' || time == null || units === '' || units == null) {
         window.alert('Invalid Post Activity. Please fill in the entire form.')
         return;
     }
 
-    pastactsubmit.textContent = "Got it!";
+    pastactsubmit.textContent = `Got it! ${pastact} for ${time} ${units}. Keep it up!`;
 
     pastform.style.display = 'none';
     pastsubmit.style.display = 'none';
