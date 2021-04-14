@@ -88,12 +88,12 @@ img {
   display: flex;
   text-align: center;
   font-size: 18px;
-  
 }
 
 #future-act-submit {
-  display: none;
+  display: flex;
   text-align: center;
+  font-size: 18px;
 }
 
 #past-btn {
@@ -218,10 +218,10 @@ select {
 
 }
 
-@media only screen and (min-width: 1100px) {
+@media only screen and (min-width: 1000px) {
   #content {
     margin: 40px auto;
-    max-width: 1000px;
+    max-width: 980px;
   }
   #header {
     flex-direction: row;
@@ -257,20 +257,21 @@ select {
   }
   #rm-row {
    width: auto;
+   justify-content: space-evenly;
   }
   #time-div {
     width: 60%;
     margin: 0;
   }
   #units-div {
-    width: 30%;
+    width: 25%;
   }
   #past-submit {
     margin: 0;
     padding: 10px 35px;
   }
   #for-h4 {
-    margin-left: 10px;
+    margin-left: 15px;
   }
 }
 
