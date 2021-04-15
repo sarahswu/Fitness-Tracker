@@ -46,51 +46,51 @@ pastact.addEventListener('change', (event) => {
 
 pastsubmit.onclick = function(){
     let pastdate = document.getElementById('past-date');
-    pastdate = pastdate.value;
 
     let pastact = document.getElementById('past-act');
-    pastact = pastact.value;
 
     let time = document.getElementById('time');
-    time = time.value;
 
     let units = document.getElementById('units');
-    units = units.value;
 
-    if (pastdate === '' || pastdate == null || pastact === '' || pastact == null || time === '' || time == null || units === '' || units == null) {
+    if (pastdate.value === '' || pastdate.value == null || pastact.value === '' || pastact.value == null || time.value === '' || time.value == null || units.value === '' || units.value == null) {
         window.alert('Invalid Post Activity. Please fill in the entire form.')
         return;
     }
 
-    pastbold.textContent = `${pastact} for ${time} ${units}.`;
+    pastbold.textContent = `${pastact.value} for ${time.value} ${units.value}.`;
 
     pastform.style.display = 'none';
     pastsubmit.style.display = 'none';
     pastmessagediv.style.width = '90%';
     pastactsubmit.style.display = 'flex';
     pastbtn.style.display = 'block';
-    pastform.reset();
+    
+    pastdate.value = '';
+    pastact.value = 'Walk';
+    time.value = '';
+    units.value = 'km';
 }
 
 futuresubmit.onclick = function(){
     let futuredate = document.getElementById('future-date');
-    futuredate = futuredate.value;
 
     let futureact = document.getElementById('future-act');
-    futureact = futureact.value;
 
-    if (futuredate === '' || futuredate == null || futureact === '' || futureact == null) {
+    if (futuredate.value === '' || futuredate.value == null || futureact.value === '' || futureact.value == null) {
         window.alert('Invalid Post Activity. Please fill in the entire form.')
         return;
     }
 
-    futurebold.textContent = `${futureact} on ${futuredate}`;
+    futurebold.textContent = `${futureact.value} on ${futuredate.value}`;
 
     futureform.style.display = 'none';
     futuresubmit.style.display = 'none';
     futuremessagediv.style.width = '90%';
     futureactsubmit.style.display = 'flex';
     futurebtn.style.display = 'block';
-    futureform.reset();
+    
+    futuredate.value = '';
+    futureact.value = 'Walk';
 }
 
