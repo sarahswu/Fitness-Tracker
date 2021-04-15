@@ -10,6 +10,9 @@ const futuresubmit = document.getElementById('future-submit');
 const pastactsubmit = document.getElementById('past-act-submit');
 const futureactsubmit = document.getElementById('future-act-submit');
 
+const pastmessagediv = document.getElementById('past-message-div');
+const futuremessagediv = document.getElementById('future-message-div');
+
 const pastbold = document.getElementById('past-bold');
 const futurebold = document.getElementById('future-bold');
 
@@ -18,6 +21,7 @@ pastbtn.onclick = function(){
     pastform.style.display = 'flex';
     pastsubmit.style.display = 'block'
     pastactsubmit.style.display = 'none'
+    pastmessagediv.style.width = 'auto';
 };
 
 futurebtn.onclick = function(){
@@ -25,6 +29,7 @@ futurebtn.onclick = function(){
     futureform.style.display = 'flex';
     futuresubmit.style.display = 'block'
     futureactsubmit.style.display = 'none'
+    futuremessagediv.style.width = 'auto';
 };
 
 const pastact = document.getElementById('past-act');
@@ -61,6 +66,7 @@ pastsubmit.onclick = function(){
 
     pastform.style.display = 'none';
     pastsubmit.style.display = 'none';
+    pastmessagediv.style.width = '90%';
     pastactsubmit.style.display = 'flex';
     pastbtn.style.display = 'block';
     pastform.reset();
@@ -82,6 +88,7 @@ futuresubmit.onclick = function(){
 
     futureform.style.display = 'none';
     futuresubmit.style.display = 'none';
+    futuremessagediv.style.width = '90%';
     futureactsubmit.style.display = 'flex';
     futurebtn.style.display = 'block';
     futureform.reset();

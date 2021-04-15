@@ -86,8 +86,10 @@ img {
 
 #past-act-submit {
   display: none;
+  flex-wrap: wrap;
   text-align: center;
   font-size: 18px;
+  justify-content: center;
 }
 
 #past-bold {
@@ -100,8 +102,15 @@ img {
 
 #future-act-submit {
   display: none;
+  flex-wrap: wrap;
   text-align: center;
   font-size: 18px;
+  justify-content: center;
+}
+
+#sounds-good {
+  width: 100%;
+  max-width: 570px;
 }
 
 #past-btn {
@@ -113,7 +122,7 @@ img {
   box-shadow: 1px 3px 7px #737373;
 }
 
-form {
+.form {
   display: flex;
   flex-direction: column;
   width: 80%;
@@ -127,12 +136,15 @@ form {
 
 #future-form {
   display: none;
-  width: 200px;
+  width: 80%;
+  max-width: 270px;
 }
 
 #past-date {
   font-weight: 400;
   margin-bottom: 10px;
+  width: 98%;
+  max-width: 180px;
 }
 
 #future-date {
