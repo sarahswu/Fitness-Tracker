@@ -85,13 +85,21 @@ img {
 }
 
 #past-act-submit {
-  display: flex;
+  display: none;
   text-align: center;
   font-size: 18px;
 }
 
+#past-bold {
+  font-weight: 700;
+}
+
+#future-bold {
+  font-weight: 700;
+}
+
 #future-act-submit {
-  display: flex;
+  display: none;
   text-align: center;
   font-size: 18px;
 }
