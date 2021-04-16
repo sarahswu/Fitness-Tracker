@@ -114,7 +114,10 @@ pastsubmit.onclick = function(){
     let units = document.getElementById('units');
 
     if (pastdate.value === '' || pastdate.value == null || pastact.value === '' || pastact.value == null || time.value === '' || time.value == null || units.value === '' || units.value == null) {
-        window.alert('Invalid Post Activity. Please fill in the entire form.')
+        window.alert('Invalid Post Activity. Please fill in the entire form.');
+        return;
+    } else if (pastdate.value > new Date().toISOString().split("T")[0]) {
+        window.alert('Invalid Post Activity. Please fill in a past date.');
         return;
     }
 
@@ -149,6 +152,9 @@ futuresubmit.onclick = function(){
     if (futuredate.value === '' || futuredate.value == null || futureact.value === '' || futureact.value == null) {
         window.alert('Invalid Post Activity. Please fill in the entire form.')
         return;
+    } else if (futuredate.value < new Date().toISOString().split("T")[0]) {
+      window.alert('Invalid Post Activity. Please fill in a future date.');
+      return;
     }
 
     futurebold.textContent = `${futureact.value} on ${futuredate.value}`;

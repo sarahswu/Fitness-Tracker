@@ -264,7 +264,7 @@ select {
     width: 100%;
   }
   #past-date-div {
-    width: 15%;
+    width: 19%;
   }
   #for-row {
     width: 100%;
@@ -274,14 +274,14 @@ select {
     width: 100%;
   }
   #past-act-div {
-    width: 10%;
+    width: 13%;
   }
   #rm-row {
-   width: auto;
+   width: 330px;
    justify-content: space-evenly;
   }
   #time-div {
-    width: 60%;
+    width: 50%;
     margin: 0;
   }
   #units-div {
