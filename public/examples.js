@@ -22,6 +22,7 @@ pastdate.max = new Date().toISOString().split("T")[0];
 const futuredate = document.getElementById('future-date')
 futuredate.min = new Date().toISOString().split("T")[0];
 
+// add new activity button functions
 pastbtn.onclick = function(){
     pastbtn.style.display = 'none';
     pastform.style.display = 'flex';
@@ -38,6 +39,7 @@ futurebtn.onclick = function(){
     futuremessagediv.style.width = 'auto';
 };
 
+// event listener that changed units according to activity selected for past activity
 const pastact = document.getElementById('past-act');
 pastact.addEventListener('change', (event) => {
     const units = document.getElementById('units');
@@ -50,6 +52,7 @@ pastact.addEventListener('change', (event) => {
     }
 });
 
+// functions that POST request
 function pastpost(pastinput) {
     console.log(`Data input: ${pastinput}`);
 
@@ -104,6 +107,7 @@ function futurepost(futureinput) {
     });
 };
 
+// functions when forms are submitted
 pastsubmit.onclick = function(){
     let pastdate = document.getElementById('past-date');
 
@@ -113,6 +117,7 @@ pastsubmit.onclick = function(){
 
     let units = document.getElementById('units');
 
+    // error messages for invalid post input
     if (pastdate.value === '' || pastdate.value == null || pastact.value === '' || pastact.value == null || time.value === '' || time.value == null || units.value === '' || units.value == null) {
         window.alert('Invalid Post Activity. Please fill in the entire form.');
         return;
@@ -121,8 +126,10 @@ pastsubmit.onclick = function(){
         return;
     }
 
+    // writes input in bold for message
     pastbold.textContent = `${pastact.value} for ${time.value} ${units.value}.`;
 
+    // arr to send POST request
     let arr = [];
     arr.push(pastdate.value);
     arr.push(pastact.value);
@@ -132,12 +139,14 @@ pastsubmit.onclick = function(){
 
     pastpost(arr);
 
+    // hides form and displays message and new activity button
     pastform.style.display = 'none';
     pastsubmit.style.display = 'none';
     pastmessagediv.style.width = '90%';
     pastactsubmit.style.display = 'flex';
     pastbtn.style.display = 'block';
     
+    // reset form
     pastdate.value = '';
     pastact.value = 'Walk';
     time.value = '';
