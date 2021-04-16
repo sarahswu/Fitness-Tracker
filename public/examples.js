@@ -16,6 +16,12 @@ const futuremessagediv = document.getElementById('future-message-div');
 const pastbold = document.getElementById('past-bold');
 const futurebold = document.getElementById('future-bold');
 
+const pastdate = document.getElementById('past-date')
+pastdate.max = new Date().toISOString().split("T")[0];
+
+const futuredate = document.getElementById('future-date')
+futuredate.min = new Date().toISOString().split("T")[0];
+
 pastbtn.onclick = function(){
     pastbtn.style.display = 'none';
     pastform.style.display = 'flex';

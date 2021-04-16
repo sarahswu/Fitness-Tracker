@@ -114,12 +114,13 @@ img {
 }
 
 #past-btn {
-  display: block;
   box-shadow: 1px 3px 7px #44ac9c;
+  background-color: white;
 }
 
 #future-btn {
   box-shadow: 1px 3px 7px #737373;
+  background-color: white;
 }
 
 .form {
