@@ -44,6 +44,60 @@ pastact.addEventListener('change', (event) => {
     }
 });
 
+function pastpost(pastinput) {
+    console.log(`Data input: ${pastinput}`);
+
+    const data = { pastinput };
+
+    const options = {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data),
+    };
+
+    fetch('/pastactivity', options)
+    .then(function(response){
+      return response.text()
+    })
+    .then(function(data){
+      console.log("Data received: "+data); 
+      ;
+    })
+    .catch(function(error) {
+    console.error('There has been a problem with your fetch operation:', error);
+     displayOutput(null,error);
+    });
+};
+
+function futurepost(futureinput) {
+    console.log(`Data input: ${futureinput}`);
+
+    const data = { futureinput };
+
+    const options = {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data),
+    };
+
+    fetch('/futureactivity', options)
+    .then(function(response){
+      return response.text()
+    })
+    .then(function(data){
+      console.log("Data received: "+data); 
+      ;
+    })
+    .catch(function(error) {
+    console.error('There has been a problem with your fetch operation:', error);
+     displayOutput(null,error);
+    });
+};
+
 pastsubmit.onclick = function(){
     let pastdate = document.getElementById('past-date');
 
@@ -59,6 +113,15 @@ pastsubmit.onclick = function(){
     }
 
     pastbold.textContent = `${pastact.value} for ${time.value} ${units.value}.`;
+
+    let arr = [];
+    arr.push(pastdate.value);
+    arr.push(pastact.value);
+    arr.push(time.value);
+    arr.push(units.value);
+    console.log(arr);
+
+    pastpost(arr);
 
     pastform.style.display = 'none';
     pastsubmit.style.display = 'none';
@@ -83,6 +146,13 @@ futuresubmit.onclick = function(){
     }
 
     futurebold.textContent = `${futureact.value} on ${futuredate.value}`;
+
+    let arr = [];
+    arr.push(futuredate.value);
+    arr.push(futureact.value);
+    console.log(arr);
+
+    futurepost(arr);
 
     futureform.style.display = 'none';
     futuresubmit.style.display = 'none';
