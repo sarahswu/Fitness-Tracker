@@ -152,6 +152,7 @@ img {
   width: 100%;
   font-weight: 400;
   font-size: 16px;
+  margin-bottom: 10px;
 }
 
 select {
@@ -191,6 +192,10 @@ select {
 
 #for-h4 {
   margin-left: 20px;
+}
+
+#future-message-div {
+  padding: 20px 0;
 }
 
 .row {
@@ -293,5 +298,8 @@ select {
   }
   #for-h4 {
     margin-left: 15px;
+  }
+  #future-date {
+    margin-bottom: 0px;
   }
 }
