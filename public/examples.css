@@ -234,6 +234,9 @@ select {
   #future-date-div {
     width: 35%;
   }
+  #future-date {
+    margin-bottom: 0px;
+  }
   #future-act-div {
     width: 25%;
   }
@@ -299,7 +302,5 @@ select {
   #for-h4 {
     margin-left: 15px;
   }
-  #future-date {
-    margin-bottom: 0px;
-  }
+
 }
