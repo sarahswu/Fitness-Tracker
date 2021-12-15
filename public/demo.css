@@ -1,0 +1,90 @@
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  min-height: 100vh;
+  background-color: #333333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+img {
+  width: 100%;
+}
+
+header {
+  background-color: #f2f2f2;
+  padding: 50px 0;
+}
+
+#splashHeader {
+  width: 80%;
+  margin: auto;
+}
+
+#splashMain {
+  line-height: 40px;
+  color: white;
+  width: 80%;
+  padding: 50px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#splashTractivityLogo {
+  width: 80%;
+}
+
+
+
+h1 {
+  color: #53E0CD;
+  font-size: 18px;
+  font-weight: 700;
+  margin: 40px 0;
+}
+
+
+@media only screen and (min-width: 700px) {
+
+  body {
+    flex-direction: row;
+  }
+
+  header {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    padding: 0;
+  }
+
+  #splashHeader {
+    max-width: 550px;
+  }
+
+  #splashMain {
+    width: 40%;
+  }
+
+  #splashTractivityLogo {
+    max-width: 350px;
+  }
+
+  #splashGoogle {
+  width: 200px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  h2 {
+    font-size: 16px;
+  }
+
+}
+

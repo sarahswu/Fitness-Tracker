@@ -1,0 +1,479 @@
+/* Fitness 3 css below */
+
+#tractivityLogo {
+  width: 100px;
+  padding: 29px 0 29px 20px;
+}
+
+#logout {
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 700;
+  padding: 27px 20px 27px 0;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+/* fitness 1 & 2 css below */
+
+#reminder-box {
+  background-color: #5265d8;
+  display: none;
+}
+
+#reminder-div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: auto;
+  width: 90%;
+  min-height: 40px;
+  padding: 10px;
+}
+
+#remind {
+  justify-content: space-between;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+#yes-btn:hover, #no-btn:hover {
+  cursor: pointer;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+h5 {
+  font-weight: 700;
+}
+
+h6 {
+  font-size: 12px;
+  font-weight: 700;
+  color: white;
+}
+
+#progress-box {
+  background-color: #f2f2f2;
+  width: 80%;
+  max-width: 925px;
+  height: fit-content;
+}
+
+#flex-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+#close {
+  width: 20px;
+  display: flex;
+  align-self: flex-end;
+}
+
+#close-div {
+  display: flex;
+  justify-content: flex-end;
+  margin: 25px 25px 0 0;
+}
+
+#progress-row {
+  max-width: 295px;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  padding: 7%;
+}
+
+h7 {
+  height: 10px;
+  width: 25px;
+}
+
+#progress-act, #progress-date {
+  max-height: 30px;
+  font-weight: 400;
+}
+
+#go {
+  background-color: #333333;
+  color: white;
+  box-shadow: 1px 3px 7px #737373;
+  padding: 12px 25px;
+}
+
+/* barchart overlay */
+#overlay {
+  position: fixed; /* Sit on top of the page content */
+  display: none; /* Hidden by default */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+}
+
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #f2f2f2;
+} 
+
+header {
+  background-color: #333333;
+  color: #fff;
+  height: 75px;
+  display: flex;
+  justify-content: space-between;
+}
+
+h1 {
+  font-size: 48px;
+  font-weight: 700;
+  max-width: 390px;
+}
+
+h2 {
+  padding: 18px 40px;
+  font-size: 28px;
+}
+
+h3 {
+  font-size: 15px;
+  font-weight: 700;
+  margin: 35px 0px 10px;
+}
+
+h4 {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+p {
+  font-size: 20px;
+}
+
+button {
+  font-size: 12px;
+  font-weight: 700;
+  margin: auto;
+  padding: 12px 20px;
+  border-radius: 25px;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+#content {
+  margin: 41px;
+}
+
+#header {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+}
+
+img {
+  align-self: flex-end;
+  width: 200px;
+}
+
+#past-box {
+  margin: 0 auto;
+  background-color: #53E0CD;
+  width: 100%;
+  min-height: 210px;
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#future-box {
+  margin: 0 auto;
+  background-color: #B1BAB9;
+  width: 100%;
+  min-height: 210px;
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#past-act-submit {
+  display: none;
+  flex-wrap: wrap;
+  text-align: center;
+  font-size: 18px;
+  justify-content: center;
+}
+
+#past-bold {
+  font-weight: 700;
+}
+
+#future-bold {
+  font-weight: 700;
+}
+
+#future-act-submit {
+  display: none;
+  flex-wrap: wrap;
+  text-align: center;
+  font-size: 18px;
+  justify-content: center;
+}
+
+#sounds-good {
+  width: 100%;
+  max-width: 570px;
+}
+
+#past-btn {
+  box-shadow: 1px 3px 7px #44ac9c;
+  background-color: white;
+}
+
+#future-btn {
+  box-shadow: 1px 3px 7px #737373;
+  background-color: white;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  line-height: 25px;
+  padding: 20px 0;
+}
+
+#past-form {
+  display: none;
+}
+
+#future-form {
+  display: none;
+  width: 80%;
+  max-width: 270px;
+}
+
+#past-date {
+  font-weight: 400;
+  margin-bottom: 10px;
+  width: 98%;
+  max-width: 180px;
+}
+
+#future-date {
+  width: 100%;
+  font-weight: 400;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+select {
+  font-size: 16px;
+}
+
+#future-act {
+  width: 100%;
+}
+
+#time-div {
+  width: 55%;
+  margin-bottom: 20px;
+}
+
+#units-div {
+  width: 35%;
+}
+
+#time {
+  width: 100%;
+  font-size: 16px;
+  padding: 2px 3px;
+}
+
+#units {
+  width: 100%;
+  font-size: 16px;
+  padding: 2px 3px;
+}
+
+#for-row {
+  display: flex;
+  justify-content: start;
+  margin-bottom: 10px;
+}
+
+#for-h4 {
+  margin-left: 20px;
+}
+
+#future-message-div {
+  padding: 20px 0;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  width: 100%;
+}
+
+#progress-btn {
+  background-color: #333333;
+  color: white;
+  box-shadow: 1px 3px 7px #737373;
+  padding: 12px 25px;
+  margin-left: 10px;
+}
+
+#past-submit {
+  background-color: #333333;
+  color: white;
+  box-shadow: 1px 3px 7px #44ac9c;
+  padding: 13px 45px;
+}
+
+#future-submit {
+  background-color: #333333;
+  color: white;
+  box-shadow: 1px 3px 7px #737373;
+  padding: 13px 45px;
+  margin-top: 20px;
+}
+
+@media only screen and (min-width: 600px) {
+  /* Fitness 3 */
+  #tractivityLogo {
+    width: 210px;
+    padding: 21px 0 21px 40px;
+  }
+
+  #logout {
+    padding: 27px 40px 27px 0;
+  }
+
+  
+  /* Fitness 1 & 2 */
+  img {
+    width: 550px;
+  }
+  #future-form {
+    width: 75%;
+    max-width: 550px;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+  #future-date-div {
+    width: 35%;
+  }
+  #future-date {
+    margin-bottom: 0px;
+  }
+  #future-act-div {
+    width: 25%;
+  }
+  #future-submit {
+    margin: 0;
+    padding: 10px 35px;
+  }
+
+  #reminder-div {
+    flex-direction: row;
+    align-items: center;
+    width: 80%;
+  }
+
+  #remind {
+    width: 60%;
+  }
+
+}
+
+@media only screen and (min-width: 770px) {
+
+
+
+
+  #progress-row {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+  }
+
+
+}
+
+@media only screen and (min-width: 1000px) {
+  #content {
+    margin: 40px auto;
+    max-width: 980px;
+  }
+  #header {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  #past-form {
+    max-width: 800px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  #past-form>div {
+    margin: 0 auto;
+  }
+  #past-date {
+    margin: 0;
+    width: 100%;
+  }
+  #past-date-div {
+    width: 19%;
+  }
+  #for-row {
+    width: 100%;
+    margin: 0;
+  }
+  #past-act {
+    width: 100%;
+  }
+  #past-act-div {
+    width: 13%;
+  }
+  #rm-row {
+   width: 330px;
+   justify-content: space-evenly;
+  }
+  #time-div {
+    width: 50%;
+    margin: 0;
+  }
+  #units-div {
+    width: 25%;
+  }
+  #past-submit {
+    margin: 0;
+    padding: 10px 35px;
+  }
+  #for-h4 {
+    margin-left: 15px;
+  }
+  
+}

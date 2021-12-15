@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- phase 2 given -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BarChart Example</title>
+
+  <link rel="stylesheet" href="./css/barchart.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+  <script src="https://d3js.org/d3.v6.min.js"></script>
+  <script type="module" src="./js/examples.js"></script>
+
+  <!-- from phase 1 -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link href="./css/reset.css" rel="stylesheet" type="text/css" />
+  <link href="./css/examples.css" rel="stylesheet" type="text/css" />
+  <script defer src="./js/examples.js" type="module"></script>
+
+  <!-- Fitness 3 -->
+  <script defer src="./js/fitness3.js" type="module"></script>
+
+</head>
+<body>
+  <!-- from phase 1 -->
+  <header>
+		<img id="tractivityLogo" src="tractivity-logo-white.png">
+    <a id="logout" href="/logout">Logout</a>
+	</header>
+	
+	<div id="content">
+		<div id="header">
+			<h1>Welcome back,<br>
+        <div id="name"></div></h1>
+      
+     
+      <!-- <script>
+
+      let params = (new URL(document.location)).searchParams;
+      let name = params.get("userName");
+      console.log("User Name Received: "+name);
+      document.getElementById("username").textContent = name;
+      
+      </script> -->
+      
+			<img src="headerimage.png" alt="headerimage">
+			<p>What activity session are you logging?</p>
+		</div>
+
+
+    <div id="reminder-box">
+      <div id="reminder-div">
+        <h5>Reminder</h5>
+        <h7>&nbsp</h7>
+        <div id='remind' class="row">
+          <h6 id="didyou"></h6>
+          <h6 class="underline" id='yes-btn'>Yes</h6>
+          <h6 class="underline" id='no-btn'>No</h6>
+        </div>
+      </div>
+    </div>
+    
+	
+		<div class="row">
+      <h3>Past Activity</h3>
+      <button type="button" id="progress-btn">View Progress</button>
+    </div>
+		<div id="past-box">
+			<div id="past-message-div">
+				<div id="past-act-submit">
+					<div>
+						<h5>Got it!&nbsp;</h5>
+					</div>
+					<div id="past-bold"></div>
+					<div>
+						<h5>&nbsp;Keep it up!</h5>
+					</div>
+					<br><br>
+				</div>
+				<button type="button" id="past-btn">Add New Activity</button>
+			</div>
+			
+
+			<div class="form" id="past-form">
+				<div id="past-date-div">
+					<h4>Date:<h4>
+					<input type="date" id="past-date" name="past-date">
+				</div>
+				<div id="past-act-div">
+					<h4>Activity</h4>
+					<div class="row" id="for-row">
+						<select name="past-act" id="past-act">
+							<option value="Walk">Walk</option>
+							<option value="Run">Run</option>
+							<option value="Swim">Swim</option>
+							<option value="Bike">Bike</option>
+							<option value="Yoga">Yoga</option>
+							<option value="Soccer">Soccer</option>
+							<option value="Basketball">Basketball</option>
+						</select>
+		
+						<h4 id="for-h4">for</h4>
+					</div>
+				</div>
+				<div class="row" id="rm-row">
+					<div id="time-div">
+						<h4>Time/Distance</h4>
+						<input type="number" id="time" name="time">
+					</div>
+					<div id="units-div">
+						<h4>Units</h4>
+						<input type="text" id="units" name="units" value="km" readonly="readonly">
+					</div>
+				</div>
+
+				<button type="button" id="past-submit">Submit</button>
+
+			</div>
+
+		</div>
+	
+		<h3>Future Plans</h3>
+		<div id="future-box">
+			<div id="future-message-div">
+				<div id="future-act-submit">
+					<div id="sounds-good">
+						<h5>Sounds good! Don't forget to come back to update your session for&nbsp;</h5>
+					</div>
+					<div id="future-bold"></div>
+					<div>!</div>
+					<br><br>
+				</div>
+				<button type="button" id="future-btn">Add New Activity</button>
+			</div>
+
+			<div class="form" id="future-form">
+				<div id="future-date-div">
+					<h4>Date</h4>
+					<input type="date" id="future-date" name="future-date">
+				</div>
+				<div id="future-act-div">
+					<h4>Activity</h4>
+					<select name="future-act" id="future-act">
+						<option value="Walk">Walk</option>
+						<option value="Run">Run</option>
+						<option value="Swim">Swim</option>
+						<option value="Bike">Bike</option>
+						<option value="Yoga">Yoga</option>
+						<option value="Soccer">Soccer</option>
+						<option value="Basketball">Basketball</option>
+					</select>
+				</div>
+
+				<button type="button" id="future-submit">Submit</button>
+			</div>
+
+			<div id="future-act-submit"></div>
+
+		</div>
+	</div>
+    
+  <!-- phase 2 given -->
+  <div id='overlay'>
+    <div id='flex-box'>
+    <div id='progress-box'>
+      <div id='close-div'>
+        <img id='close' src="close.png" alt="closeimage">
+      </div>
+      <div id='progress-row'>
+        <h4>View activity for:&nbsp
+          <select name="progress-act" id="progress-act">
+					  <option value="Walk">Walk</option>
+					  <option value="Run">Run</option>
+					  <option value="Swim">Swim</option>
+					  <option value="Bike">Bike</option>
+					  <option value="Yoga">Yoga</option>
+					  <option value="Soccer">Soccer</option>
+					  <option value="Basketball">Basketball</option>
+			    </select>
+        </h4>
+        <h7>&nbsp</h7>
+        <h4>Week ending:&nbsp
+          <input type="date" id="progress-date" name="progress-date">
+        </h4>
+        <h7>&nbsp</h7>
+        <button type="button" id="go">Go</button>
+        
+        
+      </div>
+      
+      <div id='chart-anchor'></div>
+    </div>
+    </div>
+  </div>
+  
+  
+</body>
+</html>
